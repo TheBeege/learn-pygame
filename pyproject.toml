@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "learn-pygame"
+authors = [
+    {name = "Bryan \"Beege\" Berry", email = "beege@codeseoul.org"},
+]
+description = "My package description"
+readme = "README.rst"
+requires-python = ">=3.7"
+keywords = ["one", "two"]
+license = {text = "BSD-3-Clause"}
+classifiers = [
+    "Framework :: Pygame",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "pygame",
+    'importlib-metadata; python_version<"3.11"',
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+
+[project.scripts]
+game = "game.main:main"
